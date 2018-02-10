@@ -1,10 +1,10 @@
 # Online-Shopping-Website
 
 It has 4 sections: 
-## 1.) Customer registration form 
-## 2.) Customer login form 
-## 3.) Shop 
-## 4.) Sell 
+ 1.) Customer registration form 
+ 2.) Customer login form 
+ 3.) Shop 
+ 4.) Sell 
 
 ## Customer registration form: 
 Registration page is for the seller who wants to upload the information of their product. 
@@ -25,13 +25,33 @@ In order to sell any product, first the user has to login then only this page wi
 ![3](https://user-images.githubusercontent.com/34748358/36067325-ac8b47b4-0e88-11e8-8bd4-49fd8922d197.png)
 
 ### Homepage:
-This case is the front page of this website. 
+This is the front page of the website through which all the other pages can be accessed.
 ###  Registration:
-This case is for seller who want to sell their commodities.If the seller is new then he/she should give his/her information so that buyer can contact him as well as get an ID and password to login.  
+This is for seller who want to sell their commodities.If the seller is new then he/she should give his/her information so that buyer can contact him as well as get an ID and password to login.  
+#### Basic flow- 
+This page request for user name, user address, user email, user mobile number, and then he will be asked to make his id and password valid for this site only.
+#### Alternative Flow- 
+If user is already registered then no need to register. He can directly login.            
+
+PRE-CONDITION:- User should enter into the home page.              
+POST-CONDITION:- User is successfully registered into the website and will be taken back to the homepage.
+
 ### Login:
-The user having proper ID and password will be able to login and upload their product information. 
+The user having proper ID and password will be able to login and upload their product information. The login option present on the website is mainly for those customer who wishes to sell their product and have already registered with the site. This will take the customer to their page which will contain the options of selling the product, update the contact information, delete the product, delete the account. 
+FLOW OF EVENTS:- 
+1.) Basic flow-This use case will allow the registered user to login in their own page to sell, update their contact info, delete product and delete account.
+2.) Alternative flow- If user entered the wrong id or password then he/she will be again prompted to enter the id and password.
+PRE-CONDITION:-User should be registered with the site. 
+POST-CONDITION:-The user will be given the option to logout from his page.
+
 ### Shop:
-This case is for buyers.Buyers will be able view all the product information given by seller. 
+This case is for buyers.Buyers will be able view all the product information given by seller. The module used is the menu item which will take the user to the shop page where user will be able to view all the products up for sale. On this page is another menu which categories the product into clothes, shoes, jewellery, bags and watches, thus making it simpler for the buyer to view the product according to the category. Information of any product can be viewed by simply clicking on that product image. It will also contain the contact detail of the seller under whom the product is being sold. 
+FLOW OF EVENTS:- 
+1.) Basic flow- This use case will allows the user to view the product details as well as the seller details under which the product is being sold.
+2.) Alternative flow- If no product is up for sale then page will appear empty except the menu bar.
+PRE-CONDITION:- User should enter the homepage. 
+POST-CONDITION:- User can select any of the index menu on the top of the page and can go anywhere in the site. 
+
 ### Sell:
 This case is for sellers who wishes to upload their product for buyer to view and buy. This page will be visible only after the customer has logged in the website. 
 ### Modify Contact details: 
