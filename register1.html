@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+/* LOGIN */
+#b1{height:40px;width:90px;position:relative;top:-20px;left:-20px;}
+.login2 {
+		position: fixed;
+		font-family: Andale Mono;font-style:oblique;font-weight:100;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: rgba(0,0,0,0.8);
+		z-index: 99999;
+		opacity:0;
+		-webkit-transition: opacity 400ms ease-in;
+		-moz-transition: opacity 400ms ease-in;
+		transition: opacity 400ms ease-in;
+		pointer-events: none;
+	}
+	
+	.login2:target {
+		opacity:1;
+		pointer-events: auto;
+	}
+	
+	.login2 div {
+		width: 300px;
+		height:260px;
+		
+		position: relative;
+		margin: 10% auto;
+		padding: 5px 20px 60px 20px;
+		border-radius: 10px;
+		background: #fff;
+		background: -moz-linear-gradient(#fff, #999);
+		background: -webkit-linear-gradient(#fff, #999);
+		background: -o-linear-gradient(#fff, #999);
+	}
+	
+	
+	.close {
+		background: #606061;
+		color: #FFFFFF;
+		line-height: 25px;
+		position: absolute;
+		right: -12px;
+		text-align: center;
+		top: -10px;
+		width: 24px;
+		text-decoration: none;
+		font-weight: bold;
+		-webkit-border-radius: 12px;
+		-moz-border-radius: 12px;
+		border-radius: 12px;
+		-moz-box-shadow: 1px 1px 3px #000;
+		-webkit-box-shadow: 1px 1px 3px #000;
+		box-shadow: 1px 1px 3px #000;
+	}
+
+	.close:hover { background: #00d9ff; }
+	
+	#z{ height:2px;border:0;background:black;width:96%;}
+	#y{height:1px;border:0;background:black;width:95%;}
+	
+/*tags */
+
+ul#tag{position:fixed;z-index:100;background:black;width:100%;height:7%;top:-17px;}
+
+ul#tag li {
+float:right;
+margin:auto; /*0 10px;*/
+margin-top:10px;
+
+}
+#tag1{margin-right:25px;}
+ul#tag li a {
+font-size:20px;
+font-style:oblique;
+color:white;
+padding-right:10px;
+display:block ; 
+width: 80px;
+height: 28px;
+line-height: 28px;
+text-decoration: none;
+text-align: center; }
+
+ul#tag li a:hover {
+background:#006666;
+border-radius:10px;
+}
+#site{position:absolute;color:#FCA908;font-size:20px;font-style:oblique;}
+.site1{position:absolute;color:#FCA908;font-size:20px;font-style:oblique;left:29%;}
+#site1{position:absolute;color:#FCA908;font-size:20px;font-style:oblique;left:35px;top:-1px;text-transform:capitalize;}
+
+
+
+/*register*/
+
+h1{
+   font-size:450%;
+   font-family:Andale Mono;
+   font-style:oblique;
+   color:white;
+   font-weight:100;
+   position:relative;
+   margin-left:50px;
+   top:50px;
+}
+h3{
+font-size:150%;
+   font-family:Andale Mono;
+   color:white;
+   font-weight:100;
+   position:relative;
+   margin-left:-10px;
+   margin-bottom:90px;
+   top:60px;
+}
+body{
+background:url(db/27.jpg) no-repeat fixed;
+background-size:100% 100%;
+margin:auto;
+font-family: sans-serif;
+text-align:center;
+}
+
+
+.mains{
+height:40px;
+width:100%;
+
+background:pink;
+border-top-right-radius:15px;
+border-bottom-left-radius:15px;
+}
+
+div.bord{
+text-align:left;
+width:65%;
+padding:10px;
+border:2px solid black;
+position:relative;
+margin:auto;
+margin-bottom:120px;
+border-top-width:thin;
+border-radius:10px;
+background:#FFF;
+}
+
+.t1{
+padding-top:10px;
+padding-left:3px;
+font-size:20px;
+}
+.c1{position:relative;font-size:smaller;bottom:18px;left:4px;
+vertical-align:sub;color:gray;
+}
+
+.q1{
+position:relative;
+bottom:8px;
+}
+
+#s1{font-weight:800;}
+
+#site{position:absolute;color:#FCA908;font-size:20px;font-style:oblique;list-style-type:none;}
+
+input,textarea,select{line-height:2em;box-shadow:inset 1px 1px 20px #555;}
+select{height:2.3em;width:99%;}
+</style>
+<script type="javascript">
+</script>
+<body>
+<ul id="tag">
+<li id="site">MyStore.com</li>
+<li><a href="#login1" id="tag1">Login</a></li>
+<!-- <li><a href="register1.html">Signup</a></li> -->
+<li><a href="3.php">Shop</a></li>
+<li><a href="proj3.html">Home</a></li>
+<!-- <li class="site1">Hi,<a href="#" id="site1">
+    <?php
+	   echo $_SESSION["Slog"];
+	?>
+</a></li> -->
+</ul>
+<form action="login.php" method="post">
+<div id="login1" class="login2">
+	<div>
+		<a href="#close" title="Close" class="close">X</a>
+		<h2>LOG IN</h2>
+		<hr id="z"/>
+		<hr id="y"/>
+		<table>
+        <tr><td><b>User Id:</b></td> <td><input type="text" name="t1" size="15" ></td></tr><br><br>
+        <tr><td><b>Password:</b></td><td><input type="password" name="t2" size="15"></td></tr></table><br><br>
+        <input type="submit" id="b1" name="submit" value="LOG IN">
+        
+
+		</div>
+</div>
+</form>
+<form action="register.php" method="post">
+
+<h1>Register as an My-Store member</h1>
+
+
+<h3>Register now to sell on My-Store. It's easy and free.</h3>
+
+<div class="bord">
+
+<div class="mains">
+<p class="t1"><span id="s1">Tell us about yourself</span> - All fields are required</p>
+</div>
+<table>
+<tr><td>First Name:</td>&nbsp;&nbsp;&nbsp;&nbsp;<td>Last Name:</td></tr>
+<tr><td><input type="text" name="fname" size="30" required autofocus></td>&nbsp;&nbsp;&nbsp;&nbsp; <td><input type="text" name="lname" size="30" required></td></tr>
+
+<tr><td>Home address:</td></tr> <tr> <td><input type="text" name="addr" size="30" required></td></tr>
+
+<tr><td>City:</td>&nbsp;&nbsp;&nbsp;&nbsp;<td>State:</td></tr>
+<tr><td><input type="text" name="city" size="30"></td>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;<td>
+<select name="state">
+<option></option>
+<option>U.P</option>
+<option>Madha pradesh</option>
+<option>orissa</option>
+<option>Rajasthan</option>
+<option>Goa</option>
+<option>karnataka</option>
+<option>Keral</option>
+<option>Tamil-Nadu</option>
+<option>Chattisgarh</option>
+<option>Bihar</option>
+<option>maharashtra</option>
+<option>Gujrat</option>
+<option>Arunachal pradesh</option>
+</select></td></tr>
+
+<tr><td>Mobile Number:</td></tr> 
+<tr><td><input type="text" name="mob" size="30" required></td></tr>
+
+<tr><td>Email address:</td></tr>
+ 
+<tr><td><input type="text" name="email" size="30" placeholder="Email ID"></td></tr>
+
+</table>
+<p class="c1">Please use a valid email address that you frequently access.</p>
+<div class="mains">
+<p class="t1">Choose your user ID and password</p>
+</div>
+
+<table>
+<tr><td>Create your My-Store user ID:</td></tr> 
+<tr><td><input type="text" name="id" size="30" required></td></tr>
+</table>
+
+
+<table class="q1">
+<tr><td>Create your password:</td></tr> 
+<tr><td><input type="password" maxlength="8" name="pass" id="pass" size="30" placeholder="Enter atleast 6 digit password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"onchange="
+  this.setCustomValidity(this.validity.patternMismatch ? 'Password must contain at least 6 characters, including UPPER/lowercase and numbers' : '');
+  if(this.checkValidity()) form.pass1.pattern = this.value;"></td></tr>
+</table>
+
+
+
+<table class="q1">
+<tr><td>Re-enter your password:</td></tr> 
+<tr><td><input type="password" name="pass1" size="30" maxlength="8" id="pass1" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"onchange="
+  this.setCustomValidity(this.validity.patternMismatch ? 'Please enter the same Password as above' : '');
+"></td></tr>
+
+
+
+<tr><td><input type="submit" name="submit" value="Register" class="b1">
+<input type="reset" name="reset" value="Reset" class="b1" ></td></tr>
+</table>
+</div>
+
+
+</form>
+</body>
+</html>

@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+
+
+	
+label{
+        font-weight: 650;
+		font-family: sans-serif;
+}
+	
+.sell_wrap{             
+        clear:both; 
+        width:70%;
+        padding:10px;
+        border:2px solid black;
+        position:relative;
+		top:-50px;
+        margin:auto;
+        margin-bottom:120px;
+        border-top-width:thin;
+        border-radius:10px;
+        background:#FFF;
+
+	}
+	
+	
+	body{
+        background:url(db/27.jpg) no-repeat fixed;
+		background-size:100% 100%;
+		margin:auto;
+        }
+		
+/* Sell heading*/
+#top{
+   height:2px;
+   background:white;
+   width:38.5%;
+   position:relative;
+   top:110px;
+   float:left;
+   margin-left:15px;
+}
+#bottom{
+   position:relative;top:127px;margin-left:15px;
+   left:-39%;width:38.5%;background:white;
+}
+
+#qw{
+   position:relative;
+   top:-40px;
+   float:left;
+   display:inline-block;
+   text-align:center;
+   font-size:600%;
+   font-family:Andale Mono;
+   font-style:oblique;
+   color:white;
+   font-weight:100;
+   padding:0 0.25em;
+}
+
+#top1{
+     height:2px;background:white;position:relative;top:110px;margin-right:15px;}
+#bottom1{position:relative;top:107px;margin-right:15px;}
+
+
+p#free{
+   font-size:150%;
+   clear:both;
+   font-family:Andale Mono;
+   color:white;
+   font-weight:100;
+   position:relative;
+   margin:auto;
+   margin-left:230px;
+   /*margin-bottom:90px;*/
+   top:-80px;text-align:center;left:-150px;
+}
+
+/*Select box*/
+select{height:2em;width:20%;}
+
+h3{
+padding-top:10px;
+padding-left:3px;
+height:40px;
+width:100%;text-align:center;
+background:pink;
+border-top-right-radius:15px;font-family:Andale Mono;
+border-bottom-left-radius:15px;
+}
+
+h3 #t1{
+font-family:Andale Mono;
+padding-top:100px;
+padding-left:3px;
+font-weight:100;
+font-size:25px;
+text-align:center;
+margin:auto;
+}
+
+/* Form inputs */
+input,textarea,select{line-height: 2em;box-shadow:inset 1px 1px 20px #555;}
+legend{ font-size:130%;padding:10px;font-family:Andale Mono;}
+</style>
+<head>
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+function next1()
+{
+$(document).ready(function(){
+if($('#ddl1').val()=='Clothes')
+{
+
+var dataArr = [{'value':'','text':''},
+               {'value':'Mens','text':'Mens'},
+               {'value':'Womens','text':'Womens'},
+               {'value':'Kids','text':'Kids'}];
+  $('#ddl2').empty();  $('#ddl3').show(); 
+  $('#ddl3').empty(); 
+// .each loops through the array
+$.each(dataArr, function(i){
+    $('#ddl2').append($("<option></option>")
+                    .attr("value",dataArr[i]['value'])
+                    .text(dataArr[i]['text']));
+});
+}
+if($('#ddl1').val()=='Footwear')
+{
+
+var dataArr = [{'value':'','text':''},
+               {'value':'MEN','text':'Mens'},
+               {'value':'WOMEN','text':'Womens'},
+               {'value':'KID','text':'Kids'}];
+  
+$('#ddl2').empty();  $('#ddl3').show(); 
+$('#ddl3').empty();  
+// .each loops through the array
+$.each(dataArr, function(i){
+    $('#ddl2').append($("<option></option>")
+                    .attr("value",dataArr[i]['value'])
+                    .text(dataArr[i]['text']));
+});
+}
+if($('#ddl1').val()=='Jewellery')
+{
+
+var dataArr = [{'value':'','text':''},
+               {'value':'MENS','text':'Mens'},
+               {'value':'WOMENS','text':'Womens'}];
+  $('#ddl2').empty(); 
+  $('#ddl3').show(); 
+  $('#ddl3').empty(); 
+// .each loops through the array
+$.each(dataArr, function(i){
+    $('#ddl2').append($("<option></option>")
+                    .attr("value",dataArr[i]['value'])
+                    .text(dataArr[i]['text']));
+});
+}
+if($('#ddl1').val()=='Watches')
+{
+
+var dataArr = [{'value':'','text':''},
+               {'value':'Men watch','text':'Mens'},
+               {'value':'Women watch','text':'Womens'},
+			   {'value':'Kid watch','text':'Kids'}];
+  $('#ddl2').empty(); 
+  $('#ddl3').hide(); 
+// .each loops through the array
+$.each(dataArr, function(i){
+    $('#ddl2').append($("<option></option>")
+                    .attr("value",dataArr[i]['value'])
+                    .text(dataArr[i]['text']));
+});
+}
+if($('#ddl1').val()=='Bags')
+{
+
+var dataArr = [{'value':'','text':''},
+               {'value':'men','text':'Mens'},
+               {'value':'women','text':'Womens'},
+               {'value':'kid','text':'Kids'}];
+  
+$('#ddl2').empty();  $('#ddl3').show(); 
+$('#ddl3').empty();  
+// .each loops through the array
+$.each(dataArr, function(i){
+    $('#ddl2').append($("<option></option>")
+                    .attr("value",dataArr[i]['value'])
+                    .text(dataArr[i]['text']));
+});
+}
+
+
+});
+}
+
+
+function next2()
+{
+    $(document).ready(function(){
+    if($('#ddl2').val()=='Mens')
+{
+
+var dataArr = [{'value':'','text':''},
+               {'value':'Shirts','text':'Shirts'},
+			   {'value':'Jeans','text':'Jeans'},
+               {'value':'Pants/Shorts','text':'Pants/Shorts'},
+			   {'value':'Ethnic wear','text':'Ethnic wear'},
+			   {'value':'Sports wear','text':'Sports wear'},
+			   {'value':'Sleepwears','text':'Sleepwears'}];
+ $('#ddl3').empty();   
+// .each loops through the array
+$.each(dataArr, function(i){
+    $('#ddl3').append($("<option></option>")
+                    .attr("value",dataArr[i]['value'])
+                    .text(dataArr[i]['text']));
+});
+}
+
+if($('#ddl2').val()=='Womens')
+{
+
+var dataArr = [{'value':'','text':''},
+               {'value':'Dresses/Tops','text':'Dresses/Tops'},
+			   {'value':'Shorts/Skirts','text':'Shorts/skirts'},
+			   {'value':'Pants/trousers','text':'Pants/trousers'},
+			   {'value':'Leggings/Jeggings','text':'Leggings/Jeggings'},
+			   {'value':'SleepWear','text':'SleepWear'},
+			   //{'value':'ethnic Wear','text':'ethnic Wear'},
+			   {'value':'Winter Wear','text':'Winter Wear'},];
+$('#ddl3').empty(); 
+// .each loops through the array
+$.each(dataArr, function(i){
+    $('#ddl3').append($("<option></option>")
+                    .attr("value",dataArr[i]['value'])
+                    .text(dataArr[i]['text']));
+});
+}
+if($('#ddl2').val()=='Kids')
+{
+
+var dataArr = [{'value':'','text':''},
+               {'value':'Boys clothing','text':'Boys Clothing'},
+			   {'value':'Girls Clothing','text':'Girls Clothing'}];
+$('#ddl3').empty(); 
+// .each loops through the array
+$.each(dataArr, function(i){
+    $('#ddl3').append($("<option></option>")
+                    .attr("value",dataArr[i]['value'])
+                    .text(dataArr[i]['text']));
+});
+}
+
+
+
+if($('#ddl2').val()=='MEN')
+{
+
+var dataArr = [{'value':'','text':''},
+               {'value':'Boots','text':'Boots'},
+               {'value':'Floaters/Flip-flops','text':'Floaters/Flip-flops'},
+               {'value':'Sneakers','text':'Sneakers'},
+			   {'value':'Shoes','text':'Shoes'},
+			   {'value':'Sandals','text':'Sandals'}];
+$('#ddl3').empty();
+			   // .each loops through the array
+$.each(dataArr, function(i){
+    $('#ddl3').append($("<option></option>")
+                    .attr("value",dataArr[i]['value'])
+                    .text(dataArr[i]['text']));
+});
+}
+
+if($('#ddl2').val()=='WOMEN')
+{
+
+var dataArr = [{'value':'','text':''},
+               {'value':'Sandal','text':'Sandal'},
+			   {'value':'Flat/Slippers','text':'Flat/Slippers'},
+               {'value':'Wedges','text':'Wedges'},
+			   {'value':'Boot','text':'Boot'},
+			   
+			   {'value':'Bellies/Shoes','text':'Bellies/Shoes'}];
+
+$('#ddl3').empty(); 
+// .each loops through the array
+$.each(dataArr, function(i){
+    $('#ddl3').append($("<option></option>")
+                    .attr("value",dataArr[i]['value'])
+                    .text(dataArr[i]['text']));
+});
+}
+
+if($('#ddl2').val()=='KID')
+{
+
+var dataArr = [{'value':'','text':''},
+               {'value':'Boys','text':'Boys'},
+			   {'value':'Girls','text':'Girls'}];
+$('#ddl3').empty(); 
+// .each loops through the array
+$.each(dataArr, function(i){
+    $('#ddl3').append($("<option></option>")
+                    .attr("value",dataArr[i]['value'])
+                    .text(dataArr[i]['text']));
+});
+}
+if($('#ddl2').val()=='MENS')
+{
+
+var dataArr = [{'value':'','text':''},
+               {'value':'Rings','text':'Rings'},
+			   {'value':'Bracelet','text':'Bracelets'},
+			   {'value':'Pendents','text':'Pendents'},
+			   {'value':'Chain','text':'Chains'}];
+$('#ddl3').empty(); 
+// .each loops through the array
+$.each(dataArr, function(i){
+    $('#ddl3').append($("<option></option>")
+                    .attr("value",dataArr[i]['value'])
+                    .text(dataArr[i]['text']));
+});
+}
+if($('#ddl2').val()=='WOMENS')
+{
+
+var dataArr = [{'value':'','text':''},
+               {'value':'Fashion jewellery','text':'Fashion jewellery'},
+			   {'value':'Precious jewellery','text':'Precious jewellery'}];
+$('#ddl3').empty(); 
+// .each loops through the array
+$.each(dataArr, function(i){
+    $('#ddl3').append($("<option></option>")
+                    .attr("value",dataArr[i]['value'])
+                    .text(dataArr[i]['text']));
+});
+}
+if($('#ddl2').val()=='men')
+{
+
+var dataArr = [{'value':'','text':''},
+               {'value':'Backpack','text':'Backpack'},
+			   {'value':'Wallets','text':'Wallets'},
+			   {'value':'Sling bags','text':'Sling Bags'},
+			   {'value':'Laptop Bags','text':'Laptop Bags'}];
+$('#ddl3').empty(); 
+// .each loops through the array
+$.each(dataArr, function(i){
+    $('#ddl3').append($("<option></option>")
+                    .attr("value",dataArr[i]['value'])
+                    .text(dataArr[i]['text']));
+});
+}
+if($('#ddl2').val()=='women')
+{
+
+var dataArr = [{'value':'','text':''},
+               {'value':'Handbags','text':'Handbags'},
+			   {'value':'Clutches','text':'Clutches'},
+			   {'value':'Shopping Bags','text':'Shopping Bags'}];
+$('#ddl3').empty(); 
+// .each loops through the array
+$.each(dataArr, function(i){
+    $('#ddl3').append($("<option></option>")
+                    .attr("value",dataArr[i]['value'])
+                    .text(dataArr[i]['text']));
+});
+}
+if($('#ddl2').val()=='kid')
+{
+
+var dataArr = [{'value':'','text':''},
+               {'value':'Kids bag','text':'Kids Bag'}];
+$('#ddl3').empty(); 
+// .each loops through the array
+$.each(dataArr, function(i){
+    $('#ddl3').append($("<option></option>")
+                    .attr("value",dataArr[i]['value'])
+                    .text(dataArr[i]['text']));
+});
+}
+
+
+});
+}
+</script>
+
+
+</head>
+<body>
+
+
+
+<form action="sell.php" method="post" enctype="multipart/form-data">
+
+<hr id="top" />
+<hr id="bottom" />
+<p id="qw">Sell</p>
+<hr id="top1" />
+<hr id="bottom1" />
+<p id="free">Post free Add right here to sell your commodity!!</p>
+
+<div class="sell_wrap">
+<h3><span id="t1">Describe your item</span></h3>
+
+
+
+<fieldset>
+<legend>Choose Category</legend>
+<label>Choose main category</label><br>
+<select name="mainC" id="ddl1" onchange="next1()">
+<option></option>
+<option value="Clothes">Clothes's</option>
+<option value="Footwear">Footwear</option>
+<option value="Jewellery">Jewellery</option>
+<option value="Watches">Watches</option>
+<option value="Bags">Bags</option>
+</select><br><br>
+<label>Select sub-category</label><br>
+<select name="subC" id="ddl2" onchange="next2()">
+</select><br><br>
+<select name="SsubC" id="ddl3">
+</select>
+</fieldset>
+
+<br><br>
+<label>Title</label><br>
+<input type="text" size="20" placeholder="eg. levis mens jeans" name="t1" required><br>
+<label>Description</label><br>
+<textarea name="t2" cols="50" rows="10" placeholder="" maxlength="100" required></textarea><br>
+<label>Brand</label><br>
+<input type="text" size="20" placeholder="eg. Apple" name="t3" required><br>
+<label>Condition</label><br>
+<input type="text" size="20" placeholder="eg. new, used, defected" name="t4" required><br>
+<label>Barcode</label><br>
+<input type="text" size="20" placeholder="eg. ISBN,UPC" name="t5" required><br>
+<label>Original Price</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+<label>Buy it now price</label><br>
+<input type="text" size="20" name="t6" required>&nbsp;&nbsp;&nbsp;<input type="text" name="t7" size="20" required><br>
+
+
+
+
+<label>Add Photos</label><br>
+<input type="file" size="28" name="file" id="file"  required/><br><br>
+<!-- <input type="hidden" name="" value="">-->
+
+<input type="reset" value="Start over" />
+<input type="submit" />
+</div> 
+</form>
+
+</body>
+</html>
