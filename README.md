@@ -1,4 +1,8 @@
 # Online-Shopping-Website
+### Objective - 
+1.) To develop a dynamic website in which consumer will be able to view information about products as well as of seller. 
+2.) Seller will be able to upload the image and information related to product he wants to sell. 
+3.) Seller will be able to update his profile or delete his/her account or the products.
 
 It has 4 sections: 
  1.) Customer registration form 
